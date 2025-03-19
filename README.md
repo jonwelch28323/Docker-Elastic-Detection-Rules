@@ -1,5 +1,9 @@
 # Docker Elastic Detection Rules
 
+'''bash
+git pull https://github.com/elastic/detection-rules.git
+'''
+
 This is just the Elastic Detection Rules Python library in a docker container.
 
 Build the docker container:
