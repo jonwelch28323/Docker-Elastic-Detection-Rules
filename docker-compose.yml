@@ -1,0 +1,14 @@
+services:
+  rules-tools:
+    container_name: testing-elastic-detection-rules
+    image: elastic-rules:latest
+    environment:
+      - DR_KIBANA_URL=${KIBANA_URL}
+      - DR_KIBANA_USER=${KIBANA_USER}
+      - DR_KIBANA_PASSWORD=${KIBANA_PASSWORD}
+      - DR_IGNORE_SSL_ERRORS=${IGNORE_SSL_ERRORS}
+    volumes:
+      - ./config:/app/config
+    restart: unless-stopped
+
+    #python -m detection_rules kibana --ignore-ssl-errors true export-rules -sv -s
