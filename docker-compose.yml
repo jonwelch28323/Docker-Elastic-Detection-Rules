@@ -9,6 +9,7 @@ services:
       - DR_IGNORE_SSL_ERRORS=${IGNORE_SSL_ERRORS}
     volumes:
       - ./config:/app/config
+      - ./rules:/app/detection-rules/rules
     restart: unless-stopped
 
     #python -m detection_rules kibana --ignore-ssl-errors true export-rules -sv -s
