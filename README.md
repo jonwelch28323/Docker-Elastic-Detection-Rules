@@ -1,8 +1,8 @@
 # Docker Elastic Detection Rules
 
-'''bash
+```bash
 git pull https://github.com/elastic/detection-rules.git
-'''
+```
 
 Copy the .env.example to .env and update the settings.
 ```bash
